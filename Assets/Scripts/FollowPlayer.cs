@@ -4,8 +4,8 @@ using System.Collections;
 public class FollowPlayer : MonoBehaviour
 {
 
-    GameObject player;       //Public variable to store a reference to the player game object
-    public float maxOffsetMagnitude;
+    GameObject player;  //Public variable to store a reference to the player game object
+    public float maxDelta; // in either direction
     public Vector3 offset;
 
     // Use this for initialization
@@ -16,12 +16,14 @@ public class FollowPlayer : MonoBehaviour
 
     // LateUpdate is called after Update each frame
     void LateUpdate()
-    {
+    {        
         offset = transform.position - player.transform.position;
-        offset.y = 0;
-        if (offset.magnitude > maxOffsetMagnitude)
+        float deltaX = offset.x;
+        float deltaZ = offset.z;
+        if (deltaX > maxDelta || deltaZ > maxDelta)
         {
-            transform.position += offset / 2;
+            transform.position += (deltaX / 10) * Vector3.right;
+            transform.position += (deltaZ / 10) * Vector3.forward;
         }
     }
 }
