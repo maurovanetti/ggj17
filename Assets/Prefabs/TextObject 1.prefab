@@ -136,8 +136,7 @@ MonoBehaviour:
   TextFile: {fileID: 4900000, guid: 27a217de42082b94c9992639d63f1093, type: 3}
   shownText: {fileID: 114705780788157826}
   Container: {fileID: 114528591836675744}
-  textDelay: 2
-  timeDelayCut: 16
+  textDelay: 0.02
 --- !u!114 &114528591836675744
 MonoBehaviour:
   m_ObjectHideFlags: 1
