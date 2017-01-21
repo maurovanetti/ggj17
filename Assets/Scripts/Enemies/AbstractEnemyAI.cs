@@ -25,7 +25,7 @@ public abstract class AbstractEnemyAi : MonoBehaviour {
         {
             Debug.LogWarning(this.name + " killed " + character.name);
             character.GetComponent<TopDownCharacter>().OnDeath();
-            GetComponent<GoToTarget>().Target = transform; // Freezes
+            GetComponent<GoToTarget>().Target = transform.position; // Freezes
         }
     }
 
@@ -33,7 +33,9 @@ public abstract class AbstractEnemyAi : MonoBehaviour {
     {
         if (character)
         {
-            return Vector3.Distance(transform.position, character.transform.position);
+            Vector3 offset = character.transform.position - transform.position;
+            offset.y = 0;
+            return offset.magnitude;
         }
         else return float.PositiveInfinity;
         
