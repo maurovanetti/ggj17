@@ -19,16 +19,38 @@ public class Patroller : AbstractEnemyAi {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () {        
         if (goToTarget.DestinationReached)
         {
             NextPatrolPoint();    
         }
+        CheckKill();
+        CheckKillShadows();
+    }
+
+    private void CheckKillShadows()
+    {
+        foreach (GameObject shadow in GameObject.FindGameObjectsWithTag("Shadow"))
+        {
+            Vector3 offset = transform.position - shadow.transform.position;
+            offset.y = 0f;            
+            if (offset.magnitude <= killingRadius)
+            {
+                Debug.Log(shadow.name + " is " + offset.magnitude + " far from " + this.name + ": killed!");
+                TopDownCharacter tdc = shadow.GetComponent<TopDownCharacter>();
+                if (tdc)
+                {
+                    tdc.OnDeath();
+                }
+                DestroyObject(shadow, 0.1f);
+            }
+        }
     }
 
     private void NextPatrolPoint()
-    {
+    {        
         patrolIndex = (patrolIndex + 1) % patrolPoints.Count;
+        Debug.Log("Next patrol point (" + patrolIndex + ") = " + patrolPoints[patrolIndex].name + " @ " + patrolPoints[patrolIndex].position);
         goToTarget.Target = patrolPoints[patrolIndex].position;
     }
 }
