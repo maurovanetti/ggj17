@@ -14,6 +14,7 @@ namespace Utility
         public KeyCode m_runKey;
         public MaskableGraphic m_loadDoneAlert;
         public MaskableGraphic m_holdAlert;
+        bool start = false;
 
         void Start()
         {
@@ -36,11 +37,16 @@ namespace Utility
             StartCoroutine(HandlePreload(sceneName));
         }
 
+        public void StartGame()
+        {
+            start = true;
+        }
+
         private IEnumerator HandlePreload(string sceneName)
         {
             yield return new WaitForSeconds(1.0f);
 
-            AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+            AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             loadSceneAsync.allowSceneActivation = false;
 
             while (loadSceneAsync.progress < 0.89f)
@@ -51,7 +57,7 @@ namespace Utility
             if (m_loadDoneAlert)
                 m_loadDoneAlert.enabled = true;
 
-            while (!Input.GetKeyDown(m_runKey))
+            while (!Input.GetKeyDown(m_runKey) || start)
             {
                 yield return new WaitForFixedUpdate();
             }
