@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
 public class TopDownCharacter : MonoBehaviour {
 
     float m_horizontal;
     float m_vertical;
-    Rigidbody2D m_rigid2d;
+    Rigidbody m_rigidBody;
     Animator m_animator;
     Transform tr;
     bool m_dying = false;
@@ -18,7 +18,7 @@ public class TopDownCharacter : MonoBehaviour {
 	void Start ()
     {
         tr = GetComponent<Transform>();
-        m_rigid2d = gameObject.GetComponent<Rigidbody2D>();
+        m_rigidBody = gameObject.GetComponent<Rigidbody>();
         m_animator = GetComponent<Animator>();
     }
     
@@ -66,7 +66,7 @@ public class TopDownCharacter : MonoBehaviour {
         if (m_vertical < 0)
             m_animator.SetInteger("dir", 3);
 
-        if (m_rigid2d.velocity == Vector2.zero)
+        if (m_rigidBody.velocity == Vector3.zero)
             m_animator.SetBool("moving", false);
         else
             m_animator.SetBool("moving", true);
@@ -75,9 +75,9 @@ public class TopDownCharacter : MonoBehaviour {
     void FixedUpdate()
     {
         if (!m_dying)
-            m_rigid2d.velocity = tr.right * m_horizontal * m_speed * Time.fixedDeltaTime + tr.up * m_vertical * m_speed * Time.fixedDeltaTime;
+            m_rigidBody.velocity = tr.right * m_horizontal * m_speed * Time.fixedDeltaTime + tr.up * m_vertical * m_speed * Time.fixedDeltaTime;
         else
-            m_rigid2d.velocity = Vector3.zero;
+            m_rigidBody.velocity = Vector3.zero;
     }
 
     private void OnDeath()
