@@ -57,7 +57,7 @@ public abstract class TopDownCharacter : MonoBehaviour
     protected abstract float VerticalMovement();
     protected abstract Vector3 Velocity();
 
-    private void OnDeath()
+    public void OnDeath()
     {
         m_onDeathEvent.Invoke();
         m_animator.SetBool("dying", true);

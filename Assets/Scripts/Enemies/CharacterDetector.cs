@@ -1,27 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
-public class CharacterDetector : MonoBehaviour {
+public class CharacterDetector : AbstractEnemyAi {
 
     public float detectionRadius;
-
-    const string characterTag = "Player";
-    GameObject character;
     private bool detected;
 
 	// Use this for initialization
 	void Start () {
         detected = false;
-        character = GameObject.FindGameObjectWithTag(characterTag);
+        Initialize();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (!detected && Vector3.Distance(transform.position, character.transform.position) <= detectionRadius)
+        if (!detected)
         {
-            GetComponent<GoToTarget>().Target = character.transform;
-            detected = true;
+            if (CharacterDistance() <= detectionRadius)
+            {
+                GetComponent<GoToTarget>().Target = character.transform;
+                detected = true;
+            }
+
         }
+        else
+        {
+            CheckKill();
+        } 
+
 	}
 }
