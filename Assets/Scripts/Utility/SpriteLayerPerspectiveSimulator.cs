@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpriteLayerPerspectiveSimulator : MonoBehaviour
 {
+    public float m_yStartOffSet = 5.5f; 
     Transform objTrasform;
 
     void Start()
@@ -13,7 +12,9 @@ public class SpriteLayerPerspectiveSimulator : MonoBehaviour
 
     void Update()
     {
-        
+        Vector3 temp = objTrasform.position;
+        temp.y = m_yStartOffSet + temp.z*0.001f; 
+        objTrasform.position = temp;
     }
 
     void TranslateOnY()
