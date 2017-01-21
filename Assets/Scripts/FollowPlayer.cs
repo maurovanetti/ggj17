@@ -6,7 +6,7 @@ public class FollowPlayer : MonoBehaviour
 
     GameObject player;  //Public variable to store a reference to the player game object
     public float maxDelta; // in either direction
-    public Vector3 offset;
+    public float shiftingSpeed;
 
     // Use this for initialization
     void Start()
@@ -16,14 +16,16 @@ public class FollowPlayer : MonoBehaviour
 
     // LateUpdate is called after Update each frame
     void LateUpdate()
-    {        
+    {
+        Vector3 offset;
         offset = player.transform.position - transform.position;
+        offset.y = 0f;
         float deltaX = offset.x;
         float deltaZ = offset.z;
-        if (deltaX > maxDelta || deltaZ > maxDelta)
+        if (Mathf.Abs(deltaX) > maxDelta || Mathf.Abs(deltaZ) > maxDelta)
         {
-            transform.position += (deltaX / 10) * Vector3.right;
-            transform.position += (deltaZ / 10) * Vector3.forward;
+            offset.Normalize();
+            transform.position += offset * shiftingSpeed;
         }
     }
 }
