@@ -18,7 +18,6 @@ namespace Utility
         bool start = false;
 
         Canvas canvas;
-        
 
         void Start()
         {
@@ -31,6 +30,14 @@ namespace Utility
             canvas = GetComponentInChildren<Canvas>();
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(m_runKey))
+                StartGame();
+            if (Input.GetKeyDown(m_escKey))
+                QuitGame();
+        }
+
         public void OpenScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
@@ -38,6 +45,7 @@ namespace Utility
 
         public void QuitGame()
         {
+            Debug.Log("Exit");
             Application.Quit();
         }
 
@@ -73,7 +81,7 @@ namespace Utility
             if (m_loadDoneAlert)
                 m_loadDoneAlert.enabled = true;
             */
-            while ((!Input.GetKeyDown(m_runKey)) || (!start))
+            while (!start)
             {
                 yield return new WaitForFixedUpdate();
             }
