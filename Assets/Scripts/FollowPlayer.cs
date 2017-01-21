@@ -17,7 +17,7 @@ public class FollowPlayer : MonoBehaviour
     // LateUpdate is called after Update each frame
     void LateUpdate()
     {        
-        offset = transform.position - player.transform.position;
+        offset = player.transform.position - transform.position;
         float deltaX = offset.x;
         float deltaZ = offset.z;
         if (deltaX > maxDelta || deltaZ > maxDelta)
