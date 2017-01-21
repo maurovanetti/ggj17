@@ -20,10 +20,10 @@ public class FollowPlayer : MonoBehaviour
         offset = player.transform.position - transform.position;
         float deltaX = offset.x;
         float deltaZ = offset.z;
-        if (deltaX > maxDelta || deltaZ > maxDelta)
+        if (Mathf.Abs(deltaX) > maxDelta || Mathf.Abs(deltaZ) > maxDelta)
         {
-            transform.position += (deltaX / 10) * Vector3.right;
-            transform.position += (deltaZ / 10) * Vector3.forward;
+            transform.position += Mathf.Sign(deltaX) * Vector3.right;
+            transform.position += Mathf.Sign(deltaZ) * Vector3.forward;
         }
     }
 }
