@@ -6,10 +6,18 @@ using UnityEngine.AI;
 public class GoToTarget : MonoBehaviour {
     
     private NavMeshAgent agent;
+    private float destinationReachedTolerance = 0.01f;
     public Transform Target
     {
         private get;
         set;
+    }
+    public bool DestinationReached
+    {
+        get
+        {
+            return agent.remainingDistance < destinationReachedTolerance;
+        }
     }
 
     // Use this for initialization
@@ -22,6 +30,6 @@ public class GoToTarget : MonoBehaviour {
         if (Target != null && agent.destination != Target.position)
         {
             agent.destination = Target.position;
-        }
+        }        
 	}
 }
