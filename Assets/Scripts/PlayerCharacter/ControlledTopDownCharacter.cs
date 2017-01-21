@@ -2,7 +2,6 @@
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Animator))]
 public class ControlledTopDownCharacter : TopDownCharacter
 {
     public float m_speed = 10f;
@@ -10,6 +9,8 @@ public class ControlledTopDownCharacter : TopDownCharacter
     float m_horizontal;
     float m_vertical;    
     Rigidbody m_rigidBody;
+
+    public GameObject m_candleHolder;
 
     void Start()
     {
@@ -22,19 +23,6 @@ public class ControlledTopDownCharacter : TopDownCharacter
         m_horizontal = horizontal;
         m_vertical = vertical;
     }
-    
-    private void FlipPlayer()
-    {
-        Vector3 temp = tr.localScale;
-
-        if (m_horizontal < 0)
-            temp = new Vector3(-1,1,1);
-        
-        if(m_horizontal > 0 )
-            temp = Vector3.one;
-
-        tr.localScale = temp;
-    }    
 
     protected override float HorizontalMovement()
     {
@@ -56,7 +44,8 @@ public class ControlledTopDownCharacter : TopDownCharacter
         if (!m_dying)
         {
             float delta = m_speed * Time.fixedDeltaTime;
-            m_rigidBody.velocity = delta * (tr.right * m_horizontal  + tr.up * m_vertical);
+            m_rigidBody.velocity = delta * (tr.right * m_horizontal  + tr.forward * m_vertical);
+            m_candleHolder.transform.forward = m_rigidBody.velocity;
         }
         else
         {

@@ -31,22 +31,7 @@ public abstract class TopDownCharacter : MonoBehaviour
 
     private void AnimateCharacter()
     {
-        FlipPlayer();
         UpdateAnimator();
-    }
-
-    private void FlipPlayer()
-    {
-        Vector3 temp = tr.localScale;
-        if (HorizontalMovement() < 0)
-        {
-            temp = new Vector3(-1, 1, 1);
-        }
-        else if (HorizontalMovement() > 0)
-        {
-            temp = Vector3.one;
-        }
-        tr.localScale = temp;
     }
 
     private void UpdateAnimator()
