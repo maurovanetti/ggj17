@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Bell : MonoBehaviour {
 
     public bool xMagicButton;
     public float ringRange;
+    public UnityEvent onBellRing;
 
 	// Use this for initialization
 	void Start () {
