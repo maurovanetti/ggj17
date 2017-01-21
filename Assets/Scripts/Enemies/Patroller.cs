@@ -12,7 +12,7 @@ public class Patroller : AbstractEnemyAi {
 
 	// Use this for initialization
 	void Start () {
-        patrolIndex = 0;
+        patrolIndex = -1;
         goToTarget = GetComponent<GoToTarget>();
         Initialize();
         NextPatrolPoint();
@@ -28,7 +28,7 @@ public class Patroller : AbstractEnemyAi {
 
     private void NextPatrolPoint()
     {
-        patrolIndex = patrolIndex++ % patrolPoints.Count;
-        goToTarget.Target = patrolPoints[patrolIndex];
+        patrolIndex = (patrolIndex + 1) % patrolPoints.Count;
+        goToTarget.Target = patrolPoints[patrolIndex].position;
     }
 }
