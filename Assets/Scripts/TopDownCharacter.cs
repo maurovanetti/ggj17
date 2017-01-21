@@ -36,7 +36,6 @@ public abstract class TopDownCharacter : MonoBehaviour
 
     private void UpdateAnimator()
     {
-        return;
         m_animator.SetInteger("dir", 0);
 
         if (HorizontalMovement() != 0)
