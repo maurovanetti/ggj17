@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class UserInputCatcher : MonoBehaviour {
 
-    TopDownCharacter topDownCharacrer;
+    ControlledTopDownCharacter topDownCharacrer;
 
     void Start ()
     {
-        topDownCharacrer = GetComponent<TopDownCharacter>();
+        topDownCharacrer = GetComponent<ControlledTopDownCharacter>();
     }
 
     void Update ()
