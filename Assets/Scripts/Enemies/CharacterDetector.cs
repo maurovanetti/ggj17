@@ -60,14 +60,17 @@ public class CharacterDetector : AbstractEnemyAi {
 
 	}
 
-    public void ScareAway(Transform scarySource, float minFleeingDistance)
+    public void ScareAway(Transform scarySource, float fleeingDistance)
     {
-        scared = true;
-        endOfScare = Time.time + scareDuration;
-        Vector3 offset = transform.position - scarySource.position;
-        offset.y = 0f;
-        offset.Normalize();
-        goToTarget.Target = transform.position + (offset * minFleeingDistance * 1);
-        goToTarget.Sprint();
+        if (!scared)
+        {
+            scared = true;
+            endOfScare = Time.time + scareDuration;
+            Vector3 offset = transform.position - scarySource.position;
+            offset.y = 0f;
+            offset.Normalize();
+            goToTarget.Target = transform.position + (offset * fleeingDistance);
+            goToTarget.Sprint();
+        }
     }
 }
