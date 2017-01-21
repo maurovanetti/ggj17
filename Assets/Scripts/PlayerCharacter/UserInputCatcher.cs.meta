@@ -1,21 +1,22 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
-guid: 6b78bcfdcfb0ac247aca2037b5ee9d76
-folderAsset: yes
+guid: 110a31bdf5af03c42b2b8e9148caba9c
 timeCreated: 1484988554
 =======
 <<<<<<< HEAD
-guid: 15e3abdab82463e4d8350db8d8730897
-folderAsset: yes
-timeCreated: 1484988928
+guid: e1414cb050ad154478cafb9ff2c66e79
+timeCreated: 1484988929
 =======
-guid: 6cb791eb717ced442a5b02dc556d0584
-folderAsset: yes
+guid: d1eb12a046b89e7439ff2bc67c021e72
 timeCreated: 1484990035
 >>>>>>> dac31f24610d75c68b9d4aab91fbec175849131e
 >>>>>>> 67a90e88b0fcf31c6fa78002f3855385684e0271
 licenseType: Free
-DefaultImporter:
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
