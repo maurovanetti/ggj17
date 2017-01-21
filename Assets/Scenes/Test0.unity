@@ -335,6 +335,18 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1292640572037814, guid: e426e95c0ff5e2e42b5fbc6b217c4fb4, type: 2}
+      propertyPath: m_Name
+      value: PlayerAnimator
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728259010309242, guid: e426e95c0ff5e2e42b5fbc6b217c4fb4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119871876640798, guid: e426e95c0ff5e2e42b5fbc6b217c4fb4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e426e95c0ff5e2e42b5fbc6b217c4fb4, type: 2}
   m_IsPrefabParent: 0
@@ -1733,7 +1745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 053bf55fb086fa94a88e3eba1dd0650d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxOffsetMagnitude: 3
+  maxDelta: 1
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1858231071
 GameObject:
   m_ObjectHideFlags: 0
