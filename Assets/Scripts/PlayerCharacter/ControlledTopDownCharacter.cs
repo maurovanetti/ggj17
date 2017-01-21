@@ -44,7 +44,7 @@ public class ControlledTopDownCharacter : TopDownCharacter
         if (!m_dying)
         {
             float delta = m_speed * Time.fixedDeltaTime;
-            m_rigidBody.velocity = delta * (tr.right * m_horizontal  + tr.forward * m_vertical);
+            m_rigidBody.velocity = delta * (tr.right * m_horizontal  + tr.forward * m_vertical).normalized;
             if (m_rigidBody.velocity != Vector3.zero)
             {
                 m_candleHolder.transform.forward = m_rigidBody.velocity;
