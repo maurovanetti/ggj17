@@ -13,7 +13,7 @@ public class SpriteLayerPerspectiveSimulator : MonoBehaviour
 
     void Update()
     {
-        //TranslateOnY();
+        
     }
 
     void TranslateOnY()

@@ -58,7 +58,7 @@ public class TextManager : MonoBehaviour {
 
     float CalcDelayTime()
     {
-        return startTime + Mathf.Clamp(textDelay * (textArray[textNumber].Length), 1.5f, 10f);
+        return startTime + Mathf.Clamp(textDelay * (textArray[textNumber].Length), 5f, 10f);
     }
 
     void SplitTextFile()
