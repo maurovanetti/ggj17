@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterDetector : AbstractEnemyAi {
 
@@ -13,9 +14,11 @@ public class CharacterDetector : AbstractEnemyAi {
     private bool scared;
     private float endOfScare;
     private GoToTarget goToTarget;
+    private UnityEvent deathEvent;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+
         if (oblivionRadius <= detectionRadius)
         {
             Debug.LogError("oblivionRadius <= detectionRadius");
@@ -25,9 +28,9 @@ public class CharacterDetector : AbstractEnemyAi {
         scared = false;
         Initialize();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         if (scared)
         {
             if (Time.time > endOfScare)
@@ -57,14 +60,17 @@ public class CharacterDetector : AbstractEnemyAi {
 
 	}
 
-    public void ScareAway(Transform scarySource, float minFleeingDistance)
+    public void ScareAway(Transform scarySource, float fleeingDistance)
     {
-        scared = true;
-        endOfScare = Time.time + scareDuration;
-        Vector3 offset = transform.position - scarySource.position;
-        offset.y = 0f;
-        offset.Normalize();
-        goToTarget.Target = transform.position + (offset * minFleeingDistance * 1);
-        goToTarget.Sprint();
+        if (!scared)
+        {
+            scared = true;
+            endOfScare = Time.time + scareDuration;
+            Vector3 offset = transform.position - scarySource.position;
+            offset.y = 0f;
+            offset.Normalize();
+            goToTarget.Target = transform.position + (offset * fleeingDistance);
+            goToTarget.Sprint();
+        }
     }
 }

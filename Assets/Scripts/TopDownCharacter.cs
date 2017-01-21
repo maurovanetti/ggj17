@@ -60,6 +60,7 @@ public abstract class TopDownCharacter : MonoBehaviour
 
     public void OnDeath()
     {
+        Debug.Log(this.name + " dying");
         m_onDeathEvent.Invoke();
         m_animator.SetBool("dying", true);
         m_dying = true;

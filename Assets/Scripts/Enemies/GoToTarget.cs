@@ -10,7 +10,7 @@ public class GoToTarget : MonoBehaviour {
 
     private NavMeshAgent agent;
     private float destinationReachedTolerance = 0.01f;
-    private Vector3? _target;
+    public Vector3? _target;
     public Vector3? Target
     {
         private get
@@ -28,23 +28,31 @@ public class GoToTarget : MonoBehaviour {
         private get;
         set;
     }
+    
     public bool DestinationReached
     {
         get
         {
-            return agent.remainingDistance < destinationReachedTolerance;
+            Debug.Log(this.name + " _target=" + _target  + " pathPending=" + agent.pathPending + " remainingDistance=" + agent.remainingDistance);
+            if (_target != null && !agent.pathPending)
+            {
+                if (agent.remainingDistance != 0 || transform.position == _target) // fix for remainingDistance maybe-bug
+                {
+                    return agent.remainingDistance < destinationReachedTolerance;
+                }
+            }
+            return false;
         }
     }
 
     // Use this for initialization
     void Start () {
-        Target = null;
         agent = GetComponent<NavMeshAgent>();
         Walk();
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () {        
         if (MovingTarget)
         {
             _target = MovingTarget.position;
