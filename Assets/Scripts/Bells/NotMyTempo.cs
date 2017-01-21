@@ -26,7 +26,6 @@ public class NotMyTempo : MonoBehaviour
     {
         m_localAudioSource = GetComponent<AudioSource>();
         audioStartTime = Time.unscaledTime;
-        m_masterBellPlayer.volume = 0;
         nextKey = audioStartTime + m_step;
         Debug.Log("Start time:" + audioStartTime);
         StartCoroutine(CheckTempo());
@@ -41,6 +40,7 @@ public class NotMyTempo : MonoBehaviour
     {
         while (true)
         {
+            m_masterBellPlayer.loop = false;
             yield return new WaitForSecondsRealtime(m_step);
             nextKey = Time.unscaledTime + m_step;
         }
@@ -57,10 +57,9 @@ public class NotMyTempo : MonoBehaviour
                 msg1 = "Timing ok:" + updateTime + " key is: " + nextKey;
                 m_masterBellPlayer.volume = 1;
                 comboCounter++;
-            }
-            else
-            {
-                
+                m_masterBellPlayer.loop = true;
+                if (!m_masterBellPlayer.isPlaying)
+                    m_masterBellPlayer.Play();
             }
         }
         else
@@ -68,7 +67,7 @@ public class NotMyTempo : MonoBehaviour
             if (KeyWasPressed())
             {
                 msg2 = "Timing wrong:" + updateTime + " key is: " + nextKey;
-                m_masterBellPlayer.volume = 0;
+                m_masterBellPlayer.loop = false;
                 m_localAudioSource.Play();
                 comboCounter = 0;
             }
@@ -76,8 +75,7 @@ public class NotMyTempo : MonoBehaviour
 
         if (comboCounter >= m_maxCombCounter)
         {
-            Debug.Log(comboCounter);
-            m_masterBellPlayer.PlayOneShot(m_succeedSound);
+            m_masterAudioPlayer.PlayOneShot(m_succeedSound);
             comboCounter = 0;
         }
     }
