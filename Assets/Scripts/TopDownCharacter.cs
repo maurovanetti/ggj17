@@ -21,7 +21,6 @@ public abstract class TopDownCharacter : MonoBehaviour
     {
         tr = GetComponent<Transform>();
         m_animator = GetComponent<Animator>();
-        m_animator.SetInteger("dir", 0);
     }
 
     void Update()
@@ -36,17 +35,19 @@ public abstract class TopDownCharacter : MonoBehaviour
     }
 
     private void UpdateAnimator()
-    {        
+    {
+        m_animator.SetInteger("dir", 0);
+
         if (HorizontalMovement() != 0)
             m_animator.SetInteger("dir", 1);
 
-        if (VerticalMovement() > 0)
+        if (VerticalMovement() > 0.09)
             m_animator.SetInteger("dir", 2);
 
-        if (VerticalMovement() < 0)
+        if (VerticalMovement() < -0.09)
             m_animator.SetInteger("dir", 3);
 
-        if (Velocity() == Vector3.zero)
+        if (Velocity().magnitude <= 0.09 && Velocity().magnitude >= -0.09)
             m_animator.SetBool("moving", false);
         else
             m_animator.SetBool("moving", true);
