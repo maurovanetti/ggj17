@@ -3,15 +3,16 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
-public abstract class TopDownCharacter : MonoBehaviour {
-    
+public abstract class TopDownCharacter : MonoBehaviour
+{
+
     protected Animator m_animator;
     protected Transform tr;
     protected bool m_dying = false;
-    
+
     public UnityEvent m_onDeathEvent;
-    
-	void Start ()
+
+    void Start()
     {
         Initialize();
     }
@@ -21,8 +22,8 @@ public abstract class TopDownCharacter : MonoBehaviour {
         tr = GetComponent<Transform>();
         m_animator = GetComponent<Animator>();
     }
-    
-    void Update ()
+
+    void Update()
     {
         if (!m_dying)
             AnimateCharacter();
@@ -50,6 +51,7 @@ public abstract class TopDownCharacter : MonoBehaviour {
 
     private void UpdateAnimator()
     {
+        return;
         m_animator.SetInteger("dir", 0);
 
         if (HorizontalMovement() != 0)
@@ -65,6 +67,7 @@ public abstract class TopDownCharacter : MonoBehaviour {
             m_animator.SetBool("moving", false);
         else
             m_animator.SetBool("moving", true);
+
     }
 
     protected abstract float HorizontalMovement();
