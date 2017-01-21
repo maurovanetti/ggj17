@@ -9,34 +9,33 @@ public class TextManager : MonoBehaviour {
     public Text shownText;
     public Image Container;
     public float textDelay;
-    public int timeDelayCut;
 
     string[] textArray;
     float startTime;
     int textNumber;
-    public bool trigger;
     int arrayLegth;
-    int textLength;
+    bool trigger;
 
     void Start ()
     {
         SplitTextFile();
         arrayLegth = textArray.Length;
-        WriteText();
+        textNumber = -1;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        
-        if ((startTime + textDelay * (textArray[textNumber].Length/ timeDelayCut)).Equals(Time.fixedTime) && (textNumber < arrayLegth) && trigger)
+        if((Time.time >= startTime) && trigger)
         {
-            WriteText();
+            if (textNumber < arrayLegth)
+            {
+                WriteText();
+            }
+            else
+            {
+                ShowUI(false);
+            }
         }
-        else if((startTime + textDelay * (textArray[textNumber].Length / timeDelayCut)).Equals(Time.fixedTime) && textNumber == arrayLegth && trigger)
-        {
-            ShowUI(false);
-        }
-        
     }
 
     void ShowUI(bool _value)
@@ -44,34 +43,35 @@ public class TextManager : MonoBehaviour {
         trigger = _value;
         Container.enabled = _value;
         shownText.enabled = _value;
+        if(!_value)
+        {
+            startTime = 0;
+        }
     }
 
     void WriteText()
     {
-        startTime += textDelay;
-        shownText.text = textArray[textNumber];
         textNumber++;
+        shownText.text = textArray[textNumber];
+        startTime = CalcDelayTime();
+    }
+
+    float CalcDelayTime()
+    {
+        return startTime + Mathf.Clamp(textDelay * (textArray[textNumber].Length), 1.5f, 10f);
     }
 
     void SplitTextFile()
     {
-        textArray = TextFile.text.Split('\n');
+        textArray = TextFile.text.Trim().Split('\n');
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            startTime = Time.fixedTime;
+            startTime = Time.time;
             ShowUI(true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            ShowUI(false);
         }
     }
 }
