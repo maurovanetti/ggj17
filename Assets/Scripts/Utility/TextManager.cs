@@ -27,7 +27,7 @@ public class TextManager : MonoBehaviour {
     {
         if((Time.time >= startTime) && trigger)
         {
-            if (textNumber < arrayLegth)
+            if (textNumber < arrayLegth-1)
             {
                 WriteText();
             }
@@ -40,13 +40,17 @@ public class TextManager : MonoBehaviour {
 
     void ShowUI(bool _value)
     {
-        trigger = _value;
-        Container.enabled = _value;
-        shownText.enabled = _value;
-        if(!_value)
+        if (_value)
+        {
+            startTime = Time.time;
+        }
+        else
         {
             startTime = 0;
         }
+        trigger = _value;
+        Container.enabled = _value;
+        shownText.enabled = _value;
     }
 
     void WriteText()
@@ -70,7 +74,6 @@ public class TextManager : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            startTime = Time.time;
             ShowUI(true);
         }
     }

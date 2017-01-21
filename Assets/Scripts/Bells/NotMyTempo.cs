@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class NotMyTempo : MonoBehaviour
@@ -10,7 +9,6 @@ public class NotMyTempo : MonoBehaviour
     public float m_startOffset = 0.0f;
     public float m_step = 0.4f;
     public float m_saveTime = 0.2f;
-    public AudioSource m_masterAudioPlayer;
     public AudioSource m_masterBellPlayer;
     public AudioClip m_succeedSound;
     public int m_maxCombCounter;
@@ -75,16 +73,16 @@ public class NotMyTempo : MonoBehaviour
 
         if (comboCounter >= m_maxCombCounter)
         {
-            m_masterAudioPlayer.PlayOneShot(m_succeedSound);
+            m_masterBellPlayer.PlayOneShot(m_succeedSound);
             comboCounter = 0;
         }
     }
 
-    void OnGUI()
-    {
-        GUI.Box(new Rect(0, 0, Screen.width, 100), msg1);
-        GUI.Box(new Rect(0, 100, Screen.width, 100), msg2);
-    }
+    //void OnGUI()
+    //{
+    //    GUI.Box(new Rect(0, 0, Screen.width, 100), msg1);
+    //    GUI.Box(new Rect(0, 100, Screen.width, 100), msg2);
+    //}
 
     private bool TimingIsCorrect()
     {
