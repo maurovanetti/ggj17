@@ -21,6 +21,7 @@ public abstract class TopDownCharacter : MonoBehaviour
     {
         tr = GetComponent<Transform>();
         m_animator = GetComponent<Animator>();
+        m_animator.SetInteger("dir", 0);
     }
 
     void Update()
@@ -35,9 +36,7 @@ public abstract class TopDownCharacter : MonoBehaviour
     }
 
     private void UpdateAnimator()
-    {
-        m_animator.SetInteger("dir", 0);
-
+    {        
         if (HorizontalMovement() != 0)
             m_animator.SetInteger("dir", 1);
 
