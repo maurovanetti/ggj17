@@ -7,7 +7,6 @@ public class RespawnManager : MonoBehaviour {
 
     public float exitTime;
     public string nextSceneName;
-    public KeyCode keyToQuit;
 
     // Use this for initialization
     void Start () {
@@ -16,7 +15,7 @@ public class RespawnManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(keyToQuit))
+        if (Input.anyKeyDown)
             SceneManager.LoadScene(nextSceneName);
     }
 

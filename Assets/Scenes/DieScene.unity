@@ -188,7 +188,6 @@ GameObject:
   - component: {fileID: 715840649}
   - component: {fileID: 715840647}
   - component: {fileID: 715840650}
-  - component: {fileID: 715840648}
   - component: {fileID: 715840651}
   m_Layer: 0
   m_Name: DieSceneManger
@@ -277,27 +276,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &715840648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 715840646}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 830afe74e902a384681d531f873896dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnStart:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  m_runKey: 0
-  m_escKey: 0
-  m_loadDoneAlert: {fileID: 0}
-  m_holdAlert: {fileID: 0}
-  DieSceneExitTime: 25
 --- !u!4 &715840649
 Transform:
   m_ObjectHideFlags: 0
@@ -336,7 +314,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitTime: 45
   nextSceneName: StartScene
-  keyToQuit: 13
 --- !u!1 &1491030463
 GameObject:
   m_ObjectHideFlags: 0
