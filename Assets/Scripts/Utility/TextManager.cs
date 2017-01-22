@@ -23,7 +23,7 @@ public class TextManager : MonoBehaviour {
 
     void Start ()
     {
-        SplitTextFile();
+        textArray = SplitTextFile();
         arrayLegth = textArray.Length;
         textNumber = -1;
     }
@@ -65,14 +65,14 @@ public class TextManager : MonoBehaviour {
         startTime = CalcDelayTime();
     }
 
-    float CalcDelayTime()
+    public float CalcDelayTime()
     {
         return startTime + Mathf.Clamp(textDelay * (textArray[textNumber].Length), 5f, 10f);
     }
 
-    void SplitTextFile()
+    public string[] SplitTextFile()
     {
-        textArray = TextFile.text.Trim().Split('\n');
+        return TextFile.text.Trim().Split('\n');
     }
 
     void OnTriggerEnter(Collider other)
