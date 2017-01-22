@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 69858c9b1c278a645b00a722d3084577
+timeCreated: 1485096021
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: NONE SPRITE TESTATA_0
+    21300002: NONE SPRITE TESTATA_1
+    21300004: NONE SPRITE TESTATA_2
+    21300006: NONE SPRITE TESTATA_3
+    21300008: NONE SPRITE TESTATA_4
+    21300010: NONE SPRITE TESTATA_5
+    21300012: NONE SPRITE TESTATA_6
+    21300014: NONE SPRITE TESTATA_7
+    21300016: NONE SPRITE TESTATA_8
+    21300018: NONE SPRITE TESTATA_9
+    21300020: NONE SPRITE TESTATA_10
+    21300022: NONE SPRITE TESTATA_11
+    21300024: NONE SPRITE TESTATA_12
+    21300026: NONE SPRITE TESTATA_13
+    21300028: NONE SPRITE TESTATA_14
+    21300030: NONE SPRITE TESTATA_15
+    21300032: NONE SPRITE TESTATA_16
+    21300034: NONE SPRITE TESTATA_17
+    21300036: NONE SPRITE TESTATA_18
+    21300038: NONE SPRITE TESTATA_19
+    21300040: NONE SPRITE TESTATA_20
+    21300042: NONE SPRITE TESTATA_21
+    21300044: NONE SPRITE TESTATA_22
+    21300046: NONE SPRITE TESTATA_23
+    21300048: NONE SPRITE TESTATA_24
+    21300050: NONE SPRITE TESTATA_25
+    21300052: NONE SPRITE TESTATA_26
+    21300054: NONE SPRITE TESTATA_27
+    21300056: NONE SPRITE TESTATA_28
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 700
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_0
+      rect:
+        serializedVersion: 2
+        x: 3315
+        y: 2199
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_5
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 2120
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_6
+      rect:
+        serializedVersion: 2
+        x: 3243
+        y: 2078
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_7
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 2024
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_9
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 1998
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_10
+      rect:
+        serializedVersion: 2
+        x: 3099
+        y: 1962
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_13
+      rect:
+        serializedVersion: 2
+        x: 3738
+        y: 1939
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_14
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1925
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_15
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 817
+        width: 735
+        height: 1091
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_16
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 811
+        width: 677
+        height: 1074
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_17
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1882
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_18
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 800
+        width: 802
+        height: 1092
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_19
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 1879
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_20
+      rect:
+        serializedVersion: 2
+        x: 3634
+        y: 1841
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_22
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 813
+        width: 1337
+        height: 1443
+      alignment: 9
+      pivot: {x: 0.28198206, y: 0.0000000420642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_23
+      rect:
+        serializedVersion: 2
+        x: 3628
+        y: 1711
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_24
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 1688
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_25
+      rect:
+        serializedVersion: 2
+        x: 3598
+        y: 1564
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_26
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 1572
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_27
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1147
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NONE SPRITE TESTATA_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1119
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
