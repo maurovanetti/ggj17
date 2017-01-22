@@ -17,6 +17,8 @@ namespace Utility
         public MaskableGraphic m_holdAlert;
         bool start = false;
 
+        AudioSource AudioOnPlay;
+
         Canvas canvas;
 
         void Start()
@@ -26,7 +28,7 @@ namespace Utility
                 OnStart.Invoke();
             */
             PreloadScene();
-
+            AudioOnPlay = GetComponent<AudioSource>();
             canvas = GetComponentInChildren<Canvas>();
         }
 
@@ -63,6 +65,8 @@ namespace Utility
         public void StartGame()
         {
             start = true;
+            AudioOnPlay.Play();
+            SceneManager.UnloadSceneAsync("StartScene");
         }
 
         private IEnumerator HandlePreload(string sceneName)
