@@ -33,7 +33,7 @@ public class GoToTarget : MonoBehaviour {
     {
         get
         {
-            Debug.Log(this.name + " _target=" + _target  + " pathPending=" + agent.pathPending + " remainingDistance=" + agent.remainingDistance);
+            //Debug.Log(this.name + " _target=" + _target  + " pathPending=" + agent.pathPending + " remainingDistance=" + agent.remainingDistance);
             if (_target != null && !agent.pathPending)
             {
                 if (agent.remainingDistance != 0 || transform.position == _target) // fix for remainingDistance maybe-bug

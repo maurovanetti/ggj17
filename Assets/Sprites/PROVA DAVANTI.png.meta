@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 69df3d283d4a2b8498fb7d14c319ef51
-timeCreated: 1485017793
+timeCreated: 1485042452
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -88,8 +88,8 @@ TextureImporter:
         y: 235
         width: 95
         height: 139
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -97,12 +97,12 @@ TextureImporter:
       name: PROVA DAVANTI_1
       rect:
         serializedVersion: 2
-        x: 352
+        x: 353
         y: 235
         width: 94
         height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -114,8 +114,8 @@ TextureImporter:
         y: 235
         width: 95
         height: 139
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

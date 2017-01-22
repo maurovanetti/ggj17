@@ -32,6 +32,6 @@ public class BellActivator : MonoBehaviour {
     private void SetActiveStateToScripts(bool val)
     {
         notMyTempoScript.enabled = val;
-        bellScript.enabled = val;
+        // bellScript.enabled = val;
     }
 }

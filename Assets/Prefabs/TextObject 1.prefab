@@ -133,10 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b9a4f5395148544933e7b13e90bccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextFile: {fileID: 4900000, guid: 27a217de42082b94c9992639d63f1093, type: 3}
+  TextFile: {fileID: 4900000, guid: abc2ab83a938a80439d92e0988cd7862, type: 3}
   shownText: {fileID: 114705780788157826}
   Container: {fileID: 114528591836675744}
-  textDelay: 0.02
+  textDelay: 0.05
 --- !u!114 &114528591836675744
 MonoBehaviour:
   m_ObjectHideFlags: 1

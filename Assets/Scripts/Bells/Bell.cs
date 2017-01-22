@@ -63,7 +63,7 @@ public class Bell : MonoBehaviour {
             Vector3 offset = shadow.transform.position - transform.position;
             offset.y = 0f;
             float penetrationInBellRange = ringRange - offset.magnitude;
-            Debug.Log("penetrationInBellRange=" + penetrationInBellRange+ " offset =" + offset + " shadow.transform.position=" + shadow.transform.position);
+            //Debug.Log("penetrationInBellRange=" + penetrationInBellRange+ " offset =" + offset + " shadow.transform.position=" + shadow.transform.position);
             if (penetrationInBellRange > 0)
             {
                 shadow.GetComponent<CharacterDetector>().ScareAway(this.transform, (penetrationInBellRange * enemyBounceFactor));
