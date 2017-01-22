@@ -13,7 +13,6 @@ namespace Utility
          [Header("Preload Scene Params")]
         public KeyCode m_runKey;
         public KeyCode m_escKey;
-        public KeyCode m_endKey;
         public MaskableGraphic m_loadDoneAlert;
         public MaskableGraphic m_holdAlert;
         public float DieSceneExitTime;
@@ -28,7 +27,7 @@ namespace Utility
             if (ActiveScene.name == "StartScene")
             {
                 canvas = GetComponentInChildren<Canvas>();
-                PreloadScene("Test0");
+                PreloadScene("ScenaViola");
             }
             else if (ActiveScene.name == "DieScene")
             {
@@ -43,8 +42,6 @@ namespace Utility
                 StartGame();
             if (Input.GetKeyDown(m_escKey))
                 QuitGame();
-            if (Input.GetKeyDown(m_endKey))
-                BackToStart(false);
         }
 
         public void OpenScene(string sceneName)

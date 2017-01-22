@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 715840647}
   - component: {fileID: 715840650}
   - component: {fileID: 715840648}
+  - component: {fileID: 715840651}
   m_Layer: 0
   m_Name: DieSceneManger
   m_TagString: Untagged
@@ -206,7 +207,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b889419b9e92d8e438467589614a181e, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -282,7 +283,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715840646}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 830afe74e902a384681d531f873896dc, type: 3}
   m_Name: 
@@ -294,7 +295,6 @@ MonoBehaviour:
       PublicKeyToken=null
   m_runKey: 0
   m_escKey: 0
-  m_endKey: 13
   m_loadDoneAlert: {fileID: 0}
   m_holdAlert: {fileID: 0}
   DieSceneExitTime: 25
@@ -323,6 +323,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeTime: 0
+--- !u!114 &715840651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715840646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c464c889ea9e34db22876311c7b807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitTime: 45
+  nextSceneName: StartScene
+  keyToQuit: 13
 --- !u!1 &1491030463
 GameObject:
   m_ObjectHideFlags: 0
