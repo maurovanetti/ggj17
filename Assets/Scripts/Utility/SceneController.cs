@@ -62,11 +62,17 @@ namespace Utility
             StartCoroutine(HandlePreload(sceneName));
         }
 
+        public void UnloadOldScene()
+        {
+            string sceneName = "StartScene";
+            HandleUnload(sceneName);
+        }
+
         public void StartGame()
         {
             start = true;
             AudioOnPlay.Play();
-            SceneManager.UnloadSceneAsync("StartScene");
+            UnloadOldScene();
         }
 
         private IEnumerator HandlePreload(string sceneName)
@@ -96,6 +102,13 @@ namespace Utility
             m_holdAlert.enabled = true;
             */
             loadSceneAsync.allowSceneActivation = true;
+        }
+
+        private IEnumerator HandleUnload(string sceneName)
+        {
+
+            AsyncOperation unloadSceneAsync = SceneManager.UnloadSceneAsync(sceneName);
+            yield return new WaitForFixedUpdate();
         }
     }
 }
