@@ -2,27 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManagerAudio : MonoBehaviour {
+public class AudioStart : MonoBehaviour {
 
     AudioSource[] AudioOnPlay;
     public float FadeTime;
 
-    void Start ()
-    { 
+    void Start()
+    {
         AudioOnPlay = GetComponents<AudioSource>();
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
     }
 
     public void AudioOnStart()
     {
         AudioOnPlay[0].Play();
-        StartCoroutine(FadeOut());
-    }
-
-    public void AudioOnEnd()
-    {
-        AudioOnPlay[0].Play();
         Destroy(this.gameObject, 1.0f);
+        //StartCoroutine(FadeOut());
     }
 
     public IEnumerator FadeOut()

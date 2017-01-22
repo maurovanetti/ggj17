@@ -325,8 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neverEnding: 0
-  xMagicButton: 1
-  maxRingRange: 2
+  xMagicButton: 0
   ringDecayTime: 3
   maxCircleRangeDelta: 0.2
   onBellRing:
@@ -410,7 +409,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 10
+          m_FloatArgument: 4
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

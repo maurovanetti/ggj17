@@ -18,7 +18,7 @@ namespace Utility
         public float DieSceneExitTime;
         bool start = false;
 
-        ManagerAudio audio;
+        AudioStart audio;
         Canvas canvas;
 
         void Start()
@@ -29,11 +29,7 @@ namespace Utility
                 canvas = GetComponentInChildren<Canvas>();
                 PreloadScene("ScenaViola");
             }
-            else if (ActiveScene.name == "DieScene")
-            {
-                BackToStart(true);
-            }
-            audio = GetComponent<ManagerAudio>();
+            audio = GetComponent<AudioStart>();
         }
 
         private void Update()
@@ -63,20 +59,18 @@ namespace Utility
         {
             start = true;
             audio.AudioOnStart();
-            /*
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Test0"));
-            SceneManager.UnloadSceneAsync("StartScene");
-            */
         }
 
         private IEnumerator HandlePreload(string sceneName)
         {
             AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
             loadSceneAsync.allowSceneActivation = false;
+            /*
             while (loadSceneAsync.progress < 0.89f)
             {
                 yield return new WaitForFixedUpdate();
             }
+            */
             while (!start)
             {
                 yield return new WaitForFixedUpdate();
@@ -85,25 +79,6 @@ namespace Utility
             canvas.gameObject.SetActive(false);
             loadSceneAsync.allowSceneActivation = true;
             //SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
-        }
-
-        void BackToStart(bool value)
-        {
-            string sceneName = "StartScene";
-            if (value)
-            {
-                StartCoroutine(DieSceneExit(sceneName));
-            }
-            else
-            {
-                OpenScene(sceneName);
-            }
-        }
-
-        private IEnumerator DieSceneExit(string sceneName)
-        {
-            yield return new WaitForSeconds(DieSceneExitTime);
-            OpenScene(sceneName);
         }
     }
 }

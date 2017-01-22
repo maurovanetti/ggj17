@@ -4,7 +4,6 @@ public class Bell : MonoBehaviour {
 
     public bool neverEnding;
     public bool xMagicButton;
-    public float maxRingRange;
     public float ringDecayTime;
     public float maxCircleRangeDelta;
     public UnityEvent onBellRing;
@@ -14,6 +13,7 @@ public class Bell : MonoBehaviour {
     private float ringRange;
     private float circleRange;
     private float minCircleRange = 1f;
+    private float maxRingRange;
 
     // Use this for initialization
     void Start () {
@@ -33,7 +33,7 @@ public class Bell : MonoBehaviour {
         circleRange = Mathf.MoveTowards(circleRange, ringRange * 2, maxCircleRangeDelta);
         if (ringRange > 0)
         {            
-            ScareShadows(1.0f);
+            ScareShadows();
             if (!neverEnding)
             {
                 ringRange -= (maxRingRange / ringDecayTime) * Time.deltaTime;
@@ -57,14 +57,15 @@ public class Bell : MonoBehaviour {
         }
     }
 
-    public void Ring(float multiplier)
+    public void Ring(float force)
     {
-        ringRange = maxRingRange;
-        ScareShadows(multiplier);
+        maxRingRange = force;
+        ringRange = force;
+        ScareShadows();
         onBellRing.Invoke();
     }
 
-    private void ScareShadows(float multiplier)
+    private void ScareShadows()
     {
         if (circleRange >= minCircleRange)
         {
@@ -82,7 +83,7 @@ public class Bell : MonoBehaviour {
             //Debug.Log("penetrationInBellRange=" + penetrationInBellRange+ " offset =" + offset + " shadow.transform.position=" + shadow.transform.position);
             if (penetrationInBellRange > 0)
             {
-                shadow.GetComponent<CharacterDetector>().ScareAway(this.transform, (penetrationInBellRange * multiplier * enemyBounceFactor));
+                shadow.GetComponent<CharacterDetector>().ScareAway(this.transform, (penetrationInBellRange * enemyBounceFactor));
             }
         }
 

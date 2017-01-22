@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour {
 
+    public string sceneToJumpTo;
     public TextAsset TextFile;
-    public Text shownText;
-    public Image Container;
+    private Canvas canvas;
+    private Text shownText;
+    private Image Container;
     public float textDelay;
 
     string[] textArray;
@@ -23,6 +26,9 @@ public class TextManager : MonoBehaviour {
 
     void Start ()
     {
+        canvas = GetComponentInChildren<Canvas>(true);
+        shownText = GetComponentInChildren<Text>();
+        Container = GetComponentInChildren<Image>();
         textArray = SplitTextFile();
         arrayLegth = textArray.Length;
         textNumber = -1;
@@ -45,17 +51,27 @@ public class TextManager : MonoBehaviour {
 
     void ShowUI(bool _value)
     {
+        Debug.Log("ShowUI " + _value);
         if (_value)
         {
-            startTime = Time.time;
+            startTime = Time.time;            
         }
         else
         {
             startTime = 0;
+            DestroyObject(gameObject);
         }
         trigger = _value;
-        Container.enabled = _value;
-        shownText.enabled = _value;
+        canvas.enabled = _value;
+        if (_value)
+        {
+            Container.enabled = true;
+            shownText.enabled = true;
+        }
+        else if (sceneToJumpTo != "" && sceneToJumpTo != null)
+        {
+            SceneManager.LoadScene(sceneToJumpTo);
+        }
     }
 
     void WriteText()
@@ -77,7 +93,7 @@ public class TextManager : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (textNumber == -1 && other.gameObject.CompareTag("Player"))
         {
             ShowUI(true);
         }
