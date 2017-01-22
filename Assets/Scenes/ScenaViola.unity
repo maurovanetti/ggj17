@@ -3923,6 +3923,11 @@ Prefab:
       propertyPath: TextFile
       value: 
       objectReference: {fileID: 4900000, guid: abc2ab83a938a80439d92e0988cd7862, type: 3}
+    - target: {fileID: 114396352169152240, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: sceneToJumpTo
+      value: livello2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0501888a8bf3e02428bf5cd6fea5d40d, type: 2}
   m_IsPrefabParent: 0

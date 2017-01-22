@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour {
 
+    public string sceneToJumpTo;
     public TextAsset TextFile;
     private Canvas canvas;
     private Text shownText;
@@ -65,6 +67,10 @@ public class TextManager : MonoBehaviour {
         {
             Container.enabled = true;
             shownText.enabled = true;
+        }
+        else if (sceneToJumpTo != "" && sceneToJumpTo != null)
+        {
+            SceneManager.LoadScene(sceneToJumpTo);
         }
     }
 
