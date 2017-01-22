@@ -83,7 +83,8 @@ public abstract class TopDownCharacter : MonoBehaviour
                 m_animator.SetInteger("dir", 3);
         }
         
-        spriteRenderer.flipX = HorizontalMovement() > 0;
+        if(HorizontalMovement()!=0)
+            spriteRenderer.flipX = HorizontalMovement() > 0;
 
         if (Velocity().magnitude <= 0.09 && Velocity().magnitude >= -0.09)
             m_animator.SetBool("moving", false);
