@@ -82,12 +82,12 @@ namespace Utility
             AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             loadSceneAsync.allowSceneActivation = false;
 
-            /*
+            
             while (loadSceneAsync.progress < 0.89f)
             {
                 yield return new WaitForFixedUpdate();
             }
-            
+            /*
             if (m_loadDoneAlert)
                 m_loadDoneAlert.enabled = true;
             */
@@ -102,6 +102,7 @@ namespace Utility
             m_holdAlert.enabled = true;
             */
             loadSceneAsync.allowSceneActivation = true;
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
         }
 
         private IEnumerator HandleUnload(string sceneName)
