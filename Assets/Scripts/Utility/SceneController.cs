@@ -13,13 +13,13 @@ namespace Utility
          [Header("Preload Scene Params")]
         public KeyCode m_runKey;
         public KeyCode m_escKey;
+        public KeyCode m_endKey;
         public MaskableGraphic m_loadDoneAlert;
         public MaskableGraphic m_holdAlert;
+        public float DieSceneExitTime;
         bool start = false;
 
-        AudioSource AudioOnPlay;
-        AudioSource AudioBack;
-
+        ManagerAudio Audio;
         Canvas canvas;
 
         void Start()
@@ -28,10 +28,19 @@ namespace Utility
             if (OnStart != null)
                 OnStart.Invoke();
             */
-            PreloadScene();
-            AudioOnPlay = GetComponent<AudioSource>();
-            AudioBack = GetComponentInChildren<AudioSource>();
-            canvas = GetComponentInChildren<Canvas>();
+            Scene ActiveScene = SceneManager.GetActiveScene();
+
+            if (ActiveScene.name == "StartScene")
+            {
+                string sceneName = "Test0";
+                PreloadScene(sceneName);
+                canvas = GetComponentInChildren<Canvas>();
+            }
+            else if (ActiveScene.name == "DieScene")
+            {
+                BackToStart(true);
+            }
+            Audio = GetComponent<ManagerAudio>();
         }
 
         private void Update()
@@ -40,6 +49,8 @@ namespace Utility
                 StartGame();
             if (Input.GetKeyDown(m_escKey))
                 QuitGame();
+            if (Input.GetKeyDown(m_endKey))
+                BackToStart(false);
         }
 
         public void OpenScene(string sceneName)
@@ -49,7 +60,6 @@ namespace Utility
 
         public void QuitGame()
         {
-            Debug.Log("Exit");
             Application.Quit();
         }
 
@@ -58,22 +68,15 @@ namespace Utility
             StartCoroutine(HandlePreload(sceneName));
         }
 
-        public void PreloadScene()
-        {
-            string sceneName = "Test0";
-            StartCoroutine(HandlePreload(sceneName));
-        }
-
         public void UnloadOldScene()
         {
             string sceneName = "StartScene";
-            HandleUnload(sceneName);
         }
 
         public void StartGame()
         {
             start = true;
-            AudioOnPlay.Play();
+            Audio.AudioOnStart();
             UnloadOldScene();
         }
 
@@ -107,11 +110,23 @@ namespace Utility
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
         }
 
-        private IEnumerator HandleUnload(string sceneName)
+        void BackToStart(bool value)
         {
+            string sceneName = "StartScene";
+            if (value)
+            {
+                StartCoroutine(DieSceneExit(sceneName));
+            }
+            else
+            {
+                OpenScene(sceneName);
+            }
+        }
 
-            AsyncOperation unloadSceneAsync = SceneManager.UnloadSceneAsync(sceneName);
-            yield return new WaitForFixedUpdate();
+        private IEnumerator DieSceneExit(string sceneName)
+        {
+            yield return new WaitForSeconds(DieSceneExitTime);
+            OpenScene(sceneName);
         }
     }
 }

@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Test0.unity
   - enabled: 1
     path: Assets/Scenes/BellTest.unity
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
