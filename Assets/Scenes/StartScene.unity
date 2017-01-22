@@ -233,7 +233,6 @@ MonoBehaviour:
       PublicKeyToken=null
   m_runKey: 13
   m_escKey: 27
-  m_endKey: 0
   m_loadDoneAlert: {fileID: 0}
   m_holdAlert: {fileID: 0}
   DieSceneExitTime: 0
@@ -325,10 +324,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 11827827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f119f0a9a54610b4398bfb94fa5df383, type: 3}
+  m_Script: {fileID: 11500000, guid: a90c6b6a5edb978459e3ca8c4b446621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeTime: 2
+  FadeTime: 0
 --- !u!1 &24522666
 GameObject:
   m_ObjectHideFlags: 0
