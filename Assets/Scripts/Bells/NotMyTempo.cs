@@ -14,6 +14,7 @@ public class NotMyTempo : MonoBehaviour
     public AudioClip m_succeedSound;
     public int m_maxCombCounter;
     public UnityEvent onComboSucceed;
+    public UnityEvent onSucceedHit;
 
     float audioStartTime;
     float updateTime;
@@ -56,6 +57,7 @@ public class NotMyTempo : MonoBehaviour
                 msg1 = "Timing ok:" + updateTime + " key is: " + nextKey;
                 m_masterBellPlayer.volume = 1;
                 comboCounter++;
+                onSucceedHit.Invoke();
                 m_masterBellPlayer.loop = true;
                 if (!m_masterBellPlayer.isPlaying)
                     m_masterBellPlayer.Play();

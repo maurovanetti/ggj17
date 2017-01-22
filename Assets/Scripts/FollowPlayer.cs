@@ -14,18 +14,25 @@ public class FollowPlayer : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // LateUpdate is called after Update each frame
-    void LateUpdate()
+    void FixedUpdate()
     {
-        Vector3 offset;
-        offset = player.transform.position - transform.position;
-        offset.y = 0f;
-        float deltaX = offset.x;
-        float deltaZ = offset.z;
-        if (Mathf.Abs(deltaX) > maxDelta || Mathf.Abs(deltaZ) > maxDelta)
-        {
-            offset.Normalize();
-            transform.position += offset * shiftingSpeed;
-        }
+        Vector3 temp = player.transform.position;
+        temp.y = transform.position.y;
+        transform.position = Vector3.Lerp(transform.position,temp ,shiftingSpeed);
     }
+
+    // LateUpdate is called after Update each frame
+    //void LateUpdate()
+    //{
+    //    Vector3 offset;
+    //    offset = player.transform.position - transform.position;
+    //    offset.y = 0f;
+    //    float deltaX = offset.x;
+    //    float deltaZ = offset.z;
+    //    if (Mathf.Abs(deltaX) > maxDelta || Mathf.Abs(deltaZ) > maxDelta)
+    //    {
+    //        offset.Normalize();
+    //        transform.position += offset * shiftingSpeed;
+    //    }
+    //}
 }

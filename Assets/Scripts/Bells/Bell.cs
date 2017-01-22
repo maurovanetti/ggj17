@@ -23,7 +23,7 @@ public class Bell : MonoBehaviour {
 	void Update () {
 		if (ringRange > 0)
         {
-            ScareShadows();
+            ScareShadows(1.0f);
             ringRange -= (maxRingRange / ringDecayTime) * Time.deltaTime;
         }
         else
@@ -40,19 +40,19 @@ public class Bell : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.X))
             {
                 Debug.LogWarning("CHEAT ring");
-                Ring();
+                Ring(1.0f);
             }
         }
     }
 
-    public void Ring()
+    public void Ring(float multiplier)
     {
         ringRange = maxRingRange;
-        ScareShadows();
+        ScareShadows(multiplier);
         onBellRing.Invoke();
     }
 
-    private void ScareShadows()
+    private void ScareShadows(float multiplier)
     {
         wavesCircle.enabled = true;
         Vector3 shape = wavesCircle.transform.localScale;
@@ -67,7 +67,7 @@ public class Bell : MonoBehaviour {
             //Debug.Log("penetrationInBellRange=" + penetrationInBellRange+ " offset =" + offset + " shadow.transform.position=" + shadow.transform.position);
             if (penetrationInBellRange > 0)
             {
-                shadow.GetComponent<CharacterDetector>().ScareAway(this.transform, (penetrationInBellRange * enemyBounceFactor));
+                shadow.GetComponent<CharacterDetector>().ScareAway(this.transform, (penetrationInBellRange * multiplier * enemyBounceFactor));
             }
         }
 
