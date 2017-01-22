@@ -17,12 +17,12 @@ public class AutonomousControlledTopDownCharacter : TopDownCharacter
 
     protected override float HorizontalMovement()
     {
-        return agent.velocity.z;
+        return agent.velocity.x;
     }
 
     protected override float VerticalMovement()
     {
-        return agent.velocity.y;
+        return agent.velocity.z;
     }
 
     protected override Vector3 Velocity()

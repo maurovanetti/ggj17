@@ -434,40 +434,58 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114705780788157826, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_Text
+      value: "Sister : \"Respawn, please!\"\r\n - Press enter for puppy eyes -"
+      objectReference: {fileID: 0}
+    - target: {fileID: 224283045317494962, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00000095367
+      objectReference: {fileID: 0}
+    - target: {fileID: 224283045317494962, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -10.720001
+      objectReference: {fileID: 0}
+    - target: {fileID: 114705780788157826, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528591836675744, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528591836675744, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528591836675744, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 224387661082061278, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528591836675744, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528591836675744, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents:
     - {fileID: 65725091300674702, guid: 0501888a8bf3e02428bf5cd6fea5d40d, type: 2}
     - {fileID: 114396352169152240, guid: 0501888a8bf3e02428bf5cd6fea5d40d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0501888a8bf3e02428bf5cd6fea5d40d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1747413585 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1914515258548286, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1747413584}
---- !u!114 &1747413586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1747413585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26fd1d793ce1e45489dcb2a11f178b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextFile: {fileID: 4900000, guid: aac131ce887769a4c8d4e0cd80804447, type: 3}
-  shownText: {fileID: 1747413588}
-  Container: {fileID: 1747413587}
-  textDelay: 0
---- !u!114 &1747413587 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114528591836675744, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1747413584}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!114 &1747413588 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114705780788157826, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1747413584}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
