@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_yStartOffSet: 5.5
+  fixParentAngle: 0
 --- !u!114 &114341782686524378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,9 +348,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfdfc1a797f1f074aae797b2fb84e1a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMagicButton: 1
+  neverEnding: 1
+  xMagicButton: 0
   maxRingRange: 3
   ringDecayTime: 1
+  maxCircleRangeDelta: 0.2
   onBellRing:
     m_PersistentCalls:
       m_Calls:
