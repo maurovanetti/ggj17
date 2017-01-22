@@ -7551,7 +7551,7 @@ Prefab:
     - target: {fileID: 114396352169152240, guid: 0501888a8bf3e02428bf5cd6fea5d40d,
         type: 2}
       propertyPath: sceneToJumpTo
-      value: Outro
+      value: OutroScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0501888a8bf3e02428bf5cd6fea5d40d, type: 2}

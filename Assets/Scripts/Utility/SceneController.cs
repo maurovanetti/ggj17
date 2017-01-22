@@ -10,7 +10,7 @@ namespace Utility
     public class SceneController : MonoBehaviour
     {
         public UnityEvent OnStart;
-         [Header("Preload Scene Params")]
+        [Header("Preload Scene Params")]
         public KeyCode m_runKey;
         public KeyCode m_escKey;
         public MaskableGraphic m_loadDoneAlert;
