@@ -52,7 +52,7 @@ public class TextManager : MonoBehaviour {
         Debug.Log("ShowUI " + _value);
         if (_value)
         {
-            startTime = Time.time;
+            startTime = Time.time;            
         }
         else
         {
@@ -61,10 +61,11 @@ public class TextManager : MonoBehaviour {
         }
         trigger = _value;
         canvas.enabled = _value;
-        /*
-        Container.enabled = _value;
-        shownText.enabled = _value;
-        */
+        if (_value)
+        {
+            Container.enabled = true;
+            shownText.enabled = true;
+        }
     }
 
     void WriteText()
