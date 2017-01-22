@@ -22,6 +22,7 @@ public class ManagerAudio : MonoBehaviour {
     public void AudioOnEnd()
     {
         AudioOnPlay[0].Play();
+        Destroy(this.gameObject, 1.0f);
     }
 
     public IEnumerator FadeOut()

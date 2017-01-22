@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextManager : MonoBehaviour {
+public class DieText : MonoBehaviour {
 
     public TextAsset TextFile;
     public Text shownText;
@@ -21,7 +21,7 @@ public class TextManager : MonoBehaviour {
         ShowUI(_value);
     }
 
-    void Start ()
+    void Start()
     {
         textArray = SplitTextFile();
         arrayLegth = textArray.Length;
@@ -39,7 +39,7 @@ public class TextManager : MonoBehaviour {
             else
             {
                 ShowUI(false);
-            }     
+            }
         }
     }
 
@@ -73,13 +73,5 @@ public class TextManager : MonoBehaviour {
     string[] SplitTextFile()
     {
         return TextFile.text.Trim().Split('\n');
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            ShowUI(true);
-        }
     }
 }
