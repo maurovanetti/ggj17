@@ -12,16 +12,17 @@ public class AutonomousControlledTopDownCharacter : TopDownCharacter
     {
         Initialize();
         agent = GetComponent<NavMeshAgent>();
+        StartCoroutine(PlayRandomSound());
     }
 
     protected override float HorizontalMovement()
     {
-        return agent.nextPosition.x - tr.position.x;
+        return agent.velocity.z;
     }
 
     protected override float VerticalMovement()
     {
-        return agent.nextPosition.y - tr.position.y; ;
+        return agent.velocity.y;
     }
 
     protected override Vector3 Velocity()

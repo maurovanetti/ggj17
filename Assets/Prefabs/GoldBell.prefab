@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 114305552383543300}
   m_Layer: 0
   m_Name: GoldBell
-  m_TagString: Untagged
+  m_TagString: Bell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
