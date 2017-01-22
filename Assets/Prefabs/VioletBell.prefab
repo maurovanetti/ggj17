@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 212977804118975856}
   - component: {fileID: 114341782686524378}
   - component: {fileID: 114203933123513660}
-  - component: {fileID: 114887401898088326}
   m_Layer: 0
   m_Name: BellAnimator
   m_TagString: Untagged
@@ -418,18 +417,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
---- !u!114 &114887401898088326
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1290746720827490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c0d6b26a70a4d44f94a34fdf9b69e6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_yStartOffSet: 5.5
 --- !u!114 &114929638497880716
 MonoBehaviour:
   m_ObjectHideFlags: 1
