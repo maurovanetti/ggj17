@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4949946603771520}
   - component: {fileID: 212217124261201484}
+  - component: {fileID: 114539416215718530}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -110,6 +111,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736151880890838}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114539416215718530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1041311262978826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0d6b26a70a4d44f94a34fdf9b69e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_yStartOffSet: 5.5
+  fixParentAngle: 0
 --- !u!136 &136331669836863480
 CapsuleCollider:
   m_ObjectHideFlags: 1
