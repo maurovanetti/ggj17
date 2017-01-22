@@ -33,10 +33,9 @@ public class Patroller : AbstractEnemyAi {
         foreach (GameObject shadow in GameObject.FindGameObjectsWithTag("Shadow"))
         {
             Vector3 offset = transform.position - shadow.transform.position;
-            offset.y = 0f;            
+            offset.y = 0f;
             if (offset.magnitude <= killingRadius)
-            {
-                Debug.Log(shadow.name + " is " + offset.magnitude + " far from " + this.name + ": killed!");
+            {                
                 TopDownCharacter tdc = shadow.GetComponent<TopDownCharacter>();
                 if (tdc)
                 {

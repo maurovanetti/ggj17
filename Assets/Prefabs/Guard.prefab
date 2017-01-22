@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c35abeec25ece4b8ea9f4a78b29579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killingRadius: 0.5
+  killingRadius: 0.8
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
