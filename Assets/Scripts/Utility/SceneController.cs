@@ -18,6 +18,7 @@ namespace Utility
         bool start = false;
 
         AudioSource AudioOnPlay;
+        AudioSource AudioBack;
 
         Canvas canvas;
 
@@ -29,6 +30,7 @@ namespace Utility
             */
             PreloadScene();
             AudioOnPlay = GetComponent<AudioSource>();
+            AudioBack = GetComponentInChildren<AudioSource>();
             canvas = GetComponentInChildren<Canvas>();
         }
 
@@ -62,11 +64,17 @@ namespace Utility
             StartCoroutine(HandlePreload(sceneName));
         }
 
+        public void UnloadOldScene()
+        {
+            string sceneName = "StartScene";
+            HandleUnload(sceneName);
+        }
+
         public void StartGame()
         {
             start = true;
             AudioOnPlay.Play();
-            SceneManager.UnloadSceneAsync("StartScene");
+            UnloadOldScene();
         }
 
         private IEnumerator HandlePreload(string sceneName)
@@ -76,12 +84,12 @@ namespace Utility
             AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             loadSceneAsync.allowSceneActivation = false;
 
-            /*
+            
             while (loadSceneAsync.progress < 0.89f)
             {
                 yield return new WaitForFixedUpdate();
             }
-            
+            /*
             if (m_loadDoneAlert)
                 m_loadDoneAlert.enabled = true;
             */
@@ -96,6 +104,14 @@ namespace Utility
             m_holdAlert.enabled = true;
             */
             loadSceneAsync.allowSceneActivation = true;
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+        }
+
+        private IEnumerator HandleUnload(string sceneName)
+        {
+
+            AsyncOperation unloadSceneAsync = SceneManager.UnloadSceneAsync(sceneName);
+            yield return new WaitForFixedUpdate();
         }
     }
 }

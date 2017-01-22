@@ -16,6 +16,11 @@ public class TextManager : MonoBehaviour {
     int arrayLegth;
     bool trigger;
 
+    public void ShowText(bool _value)
+    {
+        ShowUI(_value);
+    }
+
     void Start ()
     {
         SplitTextFile();
