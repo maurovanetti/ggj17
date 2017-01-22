@@ -2,6 +2,7 @@
 using UnityEngine.Events;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
@@ -105,5 +106,9 @@ public abstract class TopDownCharacter : MonoBehaviour
         m_animator.SetBool("dying", true);
         m_dying = true;
         emitter.PlayOneShot(voice);
+        if (this.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("DieScene", LoadSceneMode.Single);
+        }
     }
 }
