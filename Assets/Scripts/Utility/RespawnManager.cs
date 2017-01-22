@@ -8,19 +8,18 @@ public class RespawnManager : MonoBehaviour {
     public float exitTime;
     public string nextSceneName;
 
-    // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         StartCoroutine(DieSceneExit());
     }
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if (Input.anyKeyDown)
+        {
             SceneManager.LoadScene(nextSceneName);
+        }
     }
-
-    void OnGUI() { 
-}
 
     private IEnumerator DieSceneExit()
     {

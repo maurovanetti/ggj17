@@ -187,8 +187,8 @@ GameObject:
   m_Component:
   - component: {fileID: 715840649}
   - component: {fileID: 715840647}
-  - component: {fileID: 715840650}
   - component: {fileID: 715840651}
+  - component: {fileID: 715840648}
   m_Layer: 0
   m_Name: DieSceneManger
   m_TagString: Untagged
@@ -276,6 +276,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &715840648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715840646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1a4c8e29286ea45848aada08e35ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeTime: 0
 --- !u!4 &715840649
 Transform:
   m_ObjectHideFlags: 0
@@ -289,18 +301,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &715840650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 715840646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f119f0a9a54610b4398bfb94fa5df383, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeTime: 0
 --- !u!114 &715840651
 MonoBehaviour:
   m_ObjectHideFlags: 0
