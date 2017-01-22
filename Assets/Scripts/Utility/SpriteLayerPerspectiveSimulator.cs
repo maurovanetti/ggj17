@@ -13,7 +13,7 @@ public class SpriteLayerPerspectiveSimulator : MonoBehaviour
     void Update()
     {
         Vector3 temp = objTrasform.position;
-        temp.y = m_yStartOffSet + temp.z*0.001f; 
+        temp.y = m_yStartOffSet - temp.z*0.001f; 
         objTrasform.position = temp;
     }
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NotMyTempo : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class NotMyTempo : MonoBehaviour
     public AudioSource m_masterBellPlayer;
     public AudioClip m_succeedSound;
     public int m_maxCombCounter;
+    public UnityEvent onComboSucceed;
 
     float audioStartTime;
     float updateTime;
@@ -25,7 +27,6 @@ public class NotMyTempo : MonoBehaviour
         m_localAudioSource = GetComponent<AudioSource>();
         audioStartTime = Time.unscaledTime;
         nextKey = audioStartTime + m_step;
-        Debug.Log("Start time:" + audioStartTime);
         StartCoroutine(CheckTempo());
     }
 
@@ -44,7 +45,7 @@ public class NotMyTempo : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         updateTime = Time.unscaledTime;
 
@@ -74,6 +75,7 @@ public class NotMyTempo : MonoBehaviour
         if (comboCounter >= m_maxCombCounter)
         {
             m_masterBellPlayer.PlayOneShot(m_succeedSound);
+            onComboSucceed.Invoke();
             comboCounter = 0;
         }
     }

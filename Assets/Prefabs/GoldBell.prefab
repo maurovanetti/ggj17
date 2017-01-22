@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 95322355527743198}
   - component: {fileID: 212728626110049754}
   - component: {fileID: 114511458625400772}
+  - component: {fileID: 114252106038586536}
   m_Layer: 0
   m_Name: BellAnimator
   m_TagString: Untagged
@@ -87,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996239772055126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: 0, z: 7.31}
+  m_LocalPosition: {x: -11.58, y: 0, z: -4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4723454185195480}
@@ -145,7 +146,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e6c6b4210382f844980bf7da0baf7fd6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -345,6 +346,18 @@ MonoBehaviour:
       PublicKeyToken=null
   enemyBounceFactor: 1.5
   wavesCircle: {fileID: 212722702529622336}
+--- !u!114 &114252106038586536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1899452263467216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0d6b26a70a4d44f94a34fdf9b69e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_yStartOffSet: 5.5
 --- !u!114 &114305552383543300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88794b39510955c4ca5f2b688d4be9e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_activationDistance: 0.2
+  m_activationDistance: 2
 --- !u!114 &114511458625400772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -384,7 +397,23 @@ MonoBehaviour:
   m_saveTime: 0.25
   m_masterBellPlayer: {fileID: 82003433682734942}
   m_succeedSound: {fileID: 8300000, guid: d5ff65e40ed99684cbc259aaabd342a1, type: 3}
-  m_maxCombCounter: 5
+  m_maxCombCounter: 3
+  onComboSucceed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114240500693305832}
+        m_MethodName: Ring
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!212 &212722702529622336
 SpriteRenderer:
   m_ObjectHideFlags: 1

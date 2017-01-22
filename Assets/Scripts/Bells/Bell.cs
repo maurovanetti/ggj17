@@ -49,6 +49,7 @@ public class Bell : MonoBehaviour {
     {
         ringRange = maxRingRange;
         ScareShadows();
+        onBellRing.Invoke();
     }
 
     private void ScareShadows()
