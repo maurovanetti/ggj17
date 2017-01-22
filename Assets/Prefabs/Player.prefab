@@ -435,6 +435,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  spriteRenderer: {fileID: 212751978053571764}
   m_speed: 50
   m_candleHolder: {fileID: 1379705555926452}
 --- !u!114 &114452915215305466
