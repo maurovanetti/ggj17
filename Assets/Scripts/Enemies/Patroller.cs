@@ -50,7 +50,7 @@ public class Patroller : AbstractEnemyAi {
     private void NextPatrolPoint()
     {        
         patrolIndex = (patrolIndex + 1) % patrolPoints.Count;
-        Debug.Log("Next patrol point (" + patrolIndex + ") = " + patrolPoints[patrolIndex].name + " @ " + patrolPoints[patrolIndex].position);
+        //Debug.Log("Next patrol point (" + patrolIndex + ") = " + patrolPoints[patrolIndex].name + " @ " + patrolPoints[patrolIndex].position);
         goToTarget.Target = patrolPoints[patrolIndex].position;
     }
 }
