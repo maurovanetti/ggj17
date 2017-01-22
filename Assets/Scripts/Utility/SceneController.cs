@@ -87,7 +87,7 @@ namespace Utility
 
             canvas.gameObject.SetActive(false);
             loadSceneAsync.allowSceneActivation = true;
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
+            //SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
         }
 
         void BackToStart(bool value)
