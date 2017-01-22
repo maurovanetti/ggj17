@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: a6c3bf50b7b90dd4fa74f079b1256b89
-timeCreated: 1485075839
+guid: 6f4451e6dc5d1654dbb82a8d35dbcf5c
+timeCreated: 1485083022
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: back walk dad_0
-    21300002: back walk dad_1
-    21300004: back walk dad_2
-    21300006: back walk dad_3
-    21300008: back walk dad_4
-    21300010: back walk dad_5
+    21300000: front dad_0
+    21300002: front dad_1
+    21300004: front dad_2
+    21300006: front dad_3
+    21300008: front dad_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -33,7 +32,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 2
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -43,10 +42,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
+  alignment: 7
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 1200
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -84,78 +83,65 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: back walk dad_0
+      name: front dad_0
       rect:
         serializedVersion: 2
-        x: 1202
-        y: 1918
-        width: 4
-        height: 7
+        x: 1485
+        y: 2132
+        width: 8
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: back walk dad_1
+      name: front dad_1
       rect:
         serializedVersion: 2
-        x: 1227
-        y: 857
-        width: 603
-        height: 1261
+        x: 2286
+        y: 2132
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front dad_2
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 847
+        width: 619
+        height: 1284
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: back walk dad_2
+      name: front dad_3
       rect:
         serializedVersion: 2
-        x: 1889
-        y: 1918
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: back walk dad_3
-      rect:
-        serializedVersion: 2
-        x: 1911
-        y: 856
-        width: 610
-        height: 1262
+        x: 1918
+        y: 847
+        width: 612
+        height: 1284
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: back walk dad_4
+      name: front dad_4
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 1848
+        x: 2526
+        y: 1916
         width: 4
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: back walk dad_5
-      rect:
-        serializedVersion: 2
-        x: 1908
-        y: 1848
-        width: 6
-        height: 7
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

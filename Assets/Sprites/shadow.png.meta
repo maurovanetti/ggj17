@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: 91e1126e87a59df419c8d0f57049f702
-timeCreated: 1485075869
+guid: b0930c9117ae310469e877451df096e5
+timeCreated: 1485082069
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: front move dad_0
-    21300002: front move dad_1
-    21300004: front move dad_2
-    21300006: front move dad_3
-    21300008: front move dad_4
+    21300000: shadow_0
+    21300002: shadow_2
+    21300004: shadow_3
+    21300006: shadow_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -45,7 +44,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 500
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -83,65 +82,52 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: front move dad_0
+      name: shadow_0
       rect:
         serializedVersion: 2
-        x: 1485
-        y: 2132
-        width: 8
-        height: 4
+        x: 0
+        y: 603
+        width: 1069
+        height: 1468
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: front move dad_1
+      name: shadow_2
       rect:
         serializedVersion: 2
-        x: 2286
-        y: 2132
-        width: 8
-        height: 4
+        x: 2273
+        y: 0
+        width: 557
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: shadow_3
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 663
+        width: 1120
+        height: 1412
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: front move dad_2
+      name: shadow_4
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 847
-        width: 619
-        height: 1284
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: front move dad_3
-      rect:
-        serializedVersion: 2
-        x: 1918
-        y: 847
-        width: 612
-        height: 1284
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: front move dad_4
-      rect:
-        serializedVersion: 2
-        x: 2526
-        y: 1916
-        width: 4
-        height: 5
+        x: 2254
+        y: 759
+        width: 1220
+        height: 1320
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
