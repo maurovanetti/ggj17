@@ -58,6 +58,7 @@ public class NotMyTempo : MonoBehaviour
                 m_masterBellPlayer.volume = 1;
                 comboCounter++;
                 onSucceedHit.Invoke();
+                HandleHeadButt();
                 m_masterBellPlayer.loop = true;
                 if (!m_masterBellPlayer.isPlaying)
                     m_masterBellPlayer.Play();
@@ -80,6 +81,12 @@ public class NotMyTempo : MonoBehaviour
             onComboSucceed.Invoke();
             comboCounter = 0;
         }
+    }
+
+    private void HandleHeadButt()
+    {
+        GameObject temp = GameObject.FindGameObjectWithTag("Player");
+        temp.GetComponent<ControlledTopDownCharacter>().HeadButt( gameObject.transform );
     }
 
     //void OnGUI()

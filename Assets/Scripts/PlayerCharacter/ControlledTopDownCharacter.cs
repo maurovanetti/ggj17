@@ -39,6 +39,16 @@ public class ControlledTopDownCharacter : TopDownCharacter
         return m_rigidBody.velocity;
     }
 
+    public void HeadButt(Transform target)
+    {
+        string trigger = "hit";
+        if (tr.position.x - target.position.x > 0)
+            trigger += "lt";
+        else
+            trigger += "rt";
+        m_animator.SetTrigger(trigger);
+    }
+
     void FixedUpdate()
     {
         if (!m_dying)
