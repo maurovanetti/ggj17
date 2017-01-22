@@ -1,12 +1,15 @@
 fileFormatVersion: 2
-guid: b8489dad87b3bc04780edb0316420eb7
-timeCreated: 1485075894
+guid: 8589bce489884264d9185290c43ae7ec
+timeCreated: 1485084341
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: lateral walk dad_0
-    21300002: lateral walk dad_1
-    21300004: lateral walk dad_2
+    21300000: back walk dad copia_0
+    21300002: back walk dad copia_1
+    21300004: back walk dad copia_2
+    21300006: back walk dad copia_3
+    21300008: back walk dad copia_4
+    21300010: back walk dad copia_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -81,41 +84,80 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lateral walk dad_0
+      name: back walk dad copia_0
       rect:
         serializedVersion: 2
-        x: 308
-        y: 861
-        width: 576
-        height: 1241
+        x: 1202
+        y: 1918
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back walk dad copia_1
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 857
+        width: 603
+        height: 1261
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lateral walk dad_1
+      name: back walk dad copia_2
       rect:
         serializedVersion: 2
-        x: 1036
+        x: 1889
+        y: 1918
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back walk dad copia_3
+      rect:
+        serializedVersion: 2
+        x: 1911
         y: 856
-        width: 575
-        height: 1247
+        width: 610
+        height: 1262
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: lateral walk dad_2
+      name: back walk dad copia_4
       rect:
         serializedVersion: 2
-        x: 1825
-        y: 856
-        width: 622
-        height: 1281
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1221
+        y: 1848
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back walk dad copia_5
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1848
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

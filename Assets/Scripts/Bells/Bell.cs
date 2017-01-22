@@ -5,32 +5,40 @@ public class Bell : MonoBehaviour {
     public bool xMagicButton;
     public float maxRingRange;
     public float ringDecayTime;
+    public float maxCircleRangeDelta;
     public UnityEvent onBellRing;
     public float enemyBounceFactor;
     public SpriteRenderer wavesCircle;
 
     private float ringRange;
+    private float circleRange;
+    private float minCircleRange = 1f;
 
-	// Use this for initialization
-	void Start () {
-		if (enemyBounceFactor < 1f)
+    // Use this for initialization
+    void Start () {
+        circleRange = 0f;
+        if (enemyBounceFactor < 1f)
         {
             Debug.LogError("enemyBounceFactor < 1");
         }
-	}
+        if (maxCircleRangeDelta <= 0f)
+        {
+            Debug.LogError("maxCircleRangeDelta <= 0");
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if (ringRange > 0)
-        {
+        circleRange = Mathf.MoveTowards(circleRange, ringRange * 2, maxCircleRangeDelta);
+        if (ringRange > 0)
+        {            
             ScareShadows(1.0f);
             ringRange -= (maxRingRange / ringDecayTime) * Time.deltaTime;
         }
-        else
+        if (circleRange < minCircleRange)
         {
             wavesCircle.enabled = false;
         }
-        
     }
 
     void OnGUI()
@@ -54,10 +62,13 @@ public class Bell : MonoBehaviour {
 
     private void ScareShadows(float multiplier)
     {
-        wavesCircle.enabled = true;
-        Vector3 shape = wavesCircle.transform.localScale;
-        float aspectRatio = shape.y / shape.x;
-        wavesCircle.transform.localScale = new Vector3(ringRange * 2, ringRange * 2 * aspectRatio, 0f);
+        if (circleRange >= minCircleRange)
+        {
+            wavesCircle.enabled = true;
+            Vector3 shape = wavesCircle.transform.localScale;
+            float aspectRatio = shape.y / shape.x;
+            wavesCircle.transform.localScale = new Vector3(circleRange, circleRange * aspectRatio, 0f);
+        }
         GameObject[] shadows = GameObject.FindGameObjectsWithTag("Shadow");
         foreach (GameObject shadow in shadows)
         {

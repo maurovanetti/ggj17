@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
@@ -9,19 +11,48 @@ public abstract class TopDownCharacter : MonoBehaviour
     protected Animator m_animator;
     protected Transform tr;
     protected bool m_dying = false;
+    protected AudioSource emitter;
+
+    public List<AudioClip> stepSounds;
+    public AudioClip voice; 
 
     public UnityEvent m_onDeathEvent;
     public SpriteRenderer spriteRenderer;
+
+    int stepCount = 0;
 
     void Start()
     {
         Initialize();
     }
 
+    protected IEnumerator PlayRandomSound()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(Random.Range(3.0f,16.5f));
+            emitter.PlayOneShot(voice);
+            yield return new WaitForSeconds(3.0f);
+        }
+    }
+
+    public void StepSoundCyclePlay()
+    {
+        if(!emitter.isPlaying&&stepSounds.Count>0)
+        {
+            emitter.clip = stepSounds[stepCount];
+            stepCount++;
+            if (stepCount >= stepSounds.Count)
+                stepCount = 0;
+            emitter.Play();
+        }
+    }
+
     protected void Initialize()
     {
         tr = GetComponent<Transform>();
         m_animator = GetComponent<Animator>();
+        emitter = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -70,5 +101,6 @@ public abstract class TopDownCharacter : MonoBehaviour
         m_onDeathEvent.Invoke();
         m_animator.SetBool("dying", true);
         m_dying = true;
+        emitter.PlayOneShot(voice);
     }
 }

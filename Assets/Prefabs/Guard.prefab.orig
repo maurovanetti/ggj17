@@ -66,6 +66,7 @@ Transform:
   m_Father: {fileID: 4190072671256056}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &4190072671256056
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -144,6 +145,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &82565587511806580
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -223,6 +225,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95587447455202852
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -264,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkingSpeed: 1
   runningSpeed: 2
+--- !u!114 &114612201265571442
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -274,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c55e706957ec5c48a1d550fed7069ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   stepSounds:
   - {fileID: 8300000, guid: 2092dc5e673be464badb7d81e368dc76, type: 3}
   - {fileID: 8300000, guid: f7ee986979f3dc4429aec8bc95aa9a53, type: 3}
@@ -285,11 +290,15 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   spriteRenderer: {fileID: 212239273593293602}
+--- !u!114 &114777151926239330
+=======
   killingRadius: 0.8
   patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &114934937874982156
+>>>>>>> eb6f6485a0290be4b2b72780de02c88738febe5f
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
