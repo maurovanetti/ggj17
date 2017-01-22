@@ -712,6 +712,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114240500693305832, guid: 62ff30618755d1b4495841a49b20306f,
+        type: 2}
+      propertyPath: maxRingRange
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ff30618755d1b4495841a49b20306f, type: 2}
   m_IsPrefabParent: 0
@@ -1551,6 +1556,11 @@ Prefab:
       propertyPath: onSucceedHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Ring
       objectReference: {fileID: 0}
+    - target: {fileID: 114240500693305832, guid: 62ff30618755d1b4495841a49b20306f,
+        type: 2}
+      propertyPath: maxRingRange
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ff30618755d1b4495841a49b20306f, type: 2}
   m_IsPrefabParent: 0
@@ -1636,6 +1646,11 @@ Prefab:
         type: 2}
       propertyPath: onSucceedHit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 114240500693305832, guid: 62ff30618755d1b4495841a49b20306f,
+        type: 2}
+      propertyPath: maxRingRange
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ff30618755d1b4495841a49b20306f, type: 2}
@@ -1809,6 +1824,11 @@ Prefab:
       propertyPath: onSucceedHit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114240500693305832, guid: 62ff30618755d1b4495841a49b20306f,
+        type: 2}
+      propertyPath: maxRingRange
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ff30618755d1b4495841a49b20306f, type: 2}
   m_IsPrefabParent: 0
@@ -1867,6 +1887,10 @@ Prefab:
     - target: {fileID: 4264885200158602, guid: e426e95c0ff5e2e42b5fbc6b217c4fb4, type: 2}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119871876640798, guid: e426e95c0ff5e2e42b5fbc6b217c4fb4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e426e95c0ff5e2e42b5fbc6b217c4fb4, type: 2}
@@ -3129,7 +3153,7 @@ Prefab:
     - target: {fileID: 114240500693305832, guid: 62ff30618755d1b4495841a49b20306f,
         type: 2}
       propertyPath: maxRingRange
-      value: 20
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ff30618755d1b4495841a49b20306f, type: 2}
@@ -4463,6 +4487,11 @@ Prefab:
       propertyPath: onSucceedHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114240500693305832, guid: 62ff30618755d1b4495841a49b20306f,
+        type: 2}
+      propertyPath: maxRingRange
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ff30618755d1b4495841a49b20306f, type: 2}
   m_IsPrefabParent: 0
@@ -4565,6 +4594,11 @@ Prefab:
         type: 2}
       propertyPath: onSucceedHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114240500693305832, guid: 62ff30618755d1b4495841a49b20306f,
+        type: 2}
+      propertyPath: maxRingRange
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62ff30618755d1b4495841a49b20306f, type: 2}

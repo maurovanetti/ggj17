@@ -118,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1191731969691016}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -11.58, y: 6, z: -4.17}
+  m_LocalPosition: {x: -11.58, y: 8.97, z: -4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4408027270420008}
@@ -348,8 +348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfdfc1a797f1f074aae797b2fb84e1a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMagicButton: 0
-  maxRingRange: 2
+  xMagicButton: 1
+  maxRingRange: 3
   ringDecayTime: 1
   onBellRing:
     m_PersistentCalls:
