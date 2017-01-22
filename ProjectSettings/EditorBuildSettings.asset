@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/livello2.unity
   - enabled: 1
     path: Assets/Scenes/DieScene.unity
+  - enabled: 1
+    path: Assets/Scenes/OutroScene.unity

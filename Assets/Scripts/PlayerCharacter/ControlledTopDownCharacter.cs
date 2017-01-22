@@ -41,6 +41,9 @@ public class ControlledTopDownCharacter : TopDownCharacter
 
     public void HeadButt(Transform target)
     {
+        if (spriteRenderer.flipX)
+            spriteRenderer.flipX = false;
+
         string trigger = "hit";
         if (tr.position.x - target.position.x > 0)
             trigger += "lt";

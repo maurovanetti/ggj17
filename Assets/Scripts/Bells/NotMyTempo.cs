@@ -69,6 +69,7 @@ public class NotMyTempo : MonoBehaviour
             if (KeyWasPressed())
             {
                 msg2 = "Timing wrong:" + updateTime + " key is: " + nextKey;
+                HandleHeadButt();
                 m_masterBellPlayer.loop = false;
                 m_localAudioSource.Play();
                 comboCounter = 0;
