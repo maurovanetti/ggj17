@@ -73,13 +73,16 @@ public abstract class TopDownCharacter : MonoBehaviour
         if (HorizontalMovement() != 0)
             m_animator.SetInteger("dir", 1);
 
-        if (VerticalMovement() > 0.09)
-            m_animator.SetInteger("dir", 2);
+        if (Mathf.Abs(VerticalMovement()) > Mathf.Abs(HorizontalMovement()))
+        {
+            if (VerticalMovement() > 0.09)
+                m_animator.SetInteger("dir", 2);
 
-        if (VerticalMovement() < -0.09)
-            m_animator.SetInteger("dir", 3);
+            if (VerticalMovement() < -0.09)
+                m_animator.SetInteger("dir", 3);
+        }
 
-        if(spriteRenderer && HorizontalMovement()!= 0)
+        if (spriteRenderer && HorizontalMovement()!= 0)
         {
             spriteRenderer.flipX = HorizontalMovement() > 0;
         }

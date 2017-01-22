@@ -2,7 +2,8 @@
 
 public class SpriteLayerPerspectiveSimulator : MonoBehaviour
 {
-    public float m_yStartOffSet = 5.5f; 
+    public float m_yStartOffSet = 5.5f;
+    public bool fixParentAngle = false;
     Transform objTrasform;
 
     void Start()
@@ -15,6 +16,10 @@ public class SpriteLayerPerspectiveSimulator : MonoBehaviour
         Vector3 temp = objTrasform.position;
         temp.y = m_yStartOffSet - temp.z*0.001f; 
         objTrasform.position = temp;
+        if(fixParentAngle)
+        {
+            objTrasform.eulerAngles = new Vector3(90,0,0);
+        }
     }
 
     void TranslateOnY()
