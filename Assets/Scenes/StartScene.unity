@@ -233,8 +233,10 @@ MonoBehaviour:
       PublicKeyToken=null
   m_runKey: 13
   m_escKey: 27
+  m_endKey: 0
   m_loadDoneAlert: {fileID: 0}
   m_holdAlert: {fileID: 0}
+  DieSceneExitTime: 0
 --- !u!82 &11827831
 AudioSource:
   m_ObjectHideFlags: 0
@@ -302,7 +304,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -877,7 +879,7 @@ GameObject:
   - component: {fileID: 1485113943}
   - component: {fileID: 1485113942}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Intro Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

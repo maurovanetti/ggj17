@@ -10,6 +10,7 @@ public class ManagerAudio : MonoBehaviour {
     void Start ()
     { 
         AudioOnPlay = GetComponents<AudioSource>();
+        DontDestroyOnLoad(this);
     }
 
     public void AudioOnStart()
@@ -35,6 +36,8 @@ public class ManagerAudio : MonoBehaviour {
         }
 
         AudioOnPlay[1].Stop();
+        Debug.LogWarning("SIPARIO");
+        Destroy(this.gameObject, 1.0f);
         AudioOnPlay[1].volume = startVolume;
     }
 }

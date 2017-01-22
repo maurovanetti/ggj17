@@ -19,28 +19,22 @@ namespace Utility
         public float DieSceneExitTime;
         bool start = false;
 
-        ManagerAudio Audio;
+        ManagerAudio audio;
         Canvas canvas;
 
         void Start()
         {
-            /*
-            if (OnStart != null)
-                OnStart.Invoke();
-            */
             Scene ActiveScene = SceneManager.GetActiveScene();
-
             if (ActiveScene.name == "StartScene")
             {
-                string sceneName = "Test0";
-                PreloadScene(sceneName);
                 canvas = GetComponentInChildren<Canvas>();
+                PreloadScene("Test0");
             }
             else if (ActiveScene.name == "DieScene")
             {
                 BackToStart(true);
             }
-            Audio = GetComponent<ManagerAudio>();
+            audio = GetComponent<ManagerAudio>();
         }
 
         private void Update()
@@ -66,46 +60,32 @@ namespace Utility
         public void PreloadScene(string sceneName)
         {
             StartCoroutine(HandlePreload(sceneName));
-        }
-
-        public void UnloadOldScene()
-        {
-            string sceneName = "StartScene";
-        }
+        }        
 
         public void StartGame()
         {
             start = true;
-            Audio.AudioOnStart();
-            UnloadOldScene();
+            audio.AudioOnStart();
+            /*
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Test0"));
+            SceneManager.UnloadSceneAsync("StartScene");
+            */
         }
 
         private IEnumerator HandlePreload(string sceneName)
         {
-            //yield return new WaitForSeconds(1.0f);
-
-            AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+            AsyncOperation loadSceneAsync = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
             loadSceneAsync.allowSceneActivation = false;
-
-            
             while (loadSceneAsync.progress < 0.89f)
             {
                 yield return new WaitForFixedUpdate();
             }
-            /*
-            if (m_loadDoneAlert)
-                m_loadDoneAlert.enabled = true;
-            */
             while (!start)
             {
                 yield return new WaitForFixedUpdate();
             }
 
             canvas.gameObject.SetActive(false);
-            /*
-            m_loadDoneAlert.enabled = false;
-            m_holdAlert.enabled = true;
-            */
             loadSceneAsync.allowSceneActivation = true;
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
         }
