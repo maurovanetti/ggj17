@@ -18,6 +18,7 @@ namespace Utility
         bool start = false;
 
         AudioSource AudioOnPlay;
+        AudioSource AudioBack;
 
         Canvas canvas;
 
@@ -29,6 +30,7 @@ namespace Utility
             */
             PreloadScene();
             AudioOnPlay = GetComponent<AudioSource>();
+            AudioBack = GetComponentInChildren<AudioSource>();
             canvas = GetComponentInChildren<Canvas>();
         }
 
