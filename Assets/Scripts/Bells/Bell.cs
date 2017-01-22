@@ -2,6 +2,7 @@
 using UnityEngine.Events;
 public class Bell : MonoBehaviour {
 
+    public bool neverEnding;
     public bool xMagicButton;
     public float maxRingRange;
     public float ringDecayTime;
@@ -33,7 +34,10 @@ public class Bell : MonoBehaviour {
         if (ringRange > 0)
         {            
             ScareShadows(1.0f);
-            ringRange -= (maxRingRange / ringDecayTime) * Time.deltaTime;
+            if (!neverEnding)
+            {
+                ringRange -= (maxRingRange / ringDecayTime) * Time.deltaTime;
+            }            
         }
         if (circleRange < minCircleRange)
         {
